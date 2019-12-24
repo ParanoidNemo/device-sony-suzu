@@ -14,4 +14,4 @@
 
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_f5121.mk \
                      $(LOCAL_DIR)/aosp_f5122.mk \
-		     $(LOCAL_DIR)/potato.mk
+		     $(LOCAL_DIR)/potato_f5121.mk
