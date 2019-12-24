@@ -18,3 +18,6 @@ add_lunch_combo aosp_f5121-eng
 add_lunch_combo aosp_f5121-userdebug
 add_lunch_combo aosp_f5122-eng
 add_lunch_combo aosp_f5122-userdebug
+
+# Addition for POSP build
+add_lunch_combo potato_f5121-userdebug
