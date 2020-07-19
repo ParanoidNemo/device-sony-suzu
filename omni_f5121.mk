@@ -12,14 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_f5121.mk \
-                     $(LOCAL_DIR)/aosp_f5122.mk \
-		     $(LOCAL_DIR)/omni_f5121.mk
+TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 
-COMMON_LUNCH_CHOICES += \
-    aosp_f5121-eng \
-    aosp_f5121-userdebug \
-    aosp_f5122-eng \
-    aosp_f5122-userdebug \
-    omni_f5121-eng \
-    omni_f5121-userdebug
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/suzu/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := omni_f5121
+PRODUCT_DEVICE := suzu
+PRODUCT_MODEL := Xperia X (AOSP)
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
