@@ -1,8 +1,4 @@
 [
   {
-    "remote":       "sony",
-    "repository":   "device-sony-loire",
-    "target_path":  "device/sony/loire-common",
-    "revision":     "q-mr1"
   }
 ]
