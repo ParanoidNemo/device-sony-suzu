@@ -14,4 +14,10 @@
 
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_f5121.mk \
                      $(LOCAL_DIR)/aosp_f5122.mk \
-		     $(LOCAL_DIR)/potato_f5121.mk
+		     		 $(LOCAL_DIR)/potato_f5121.mk
+
+COMMON_LUNCH_CHOICES += \
+	aosp_f5121-eng \
+	aosp_f5121-userdebug \
+	potato_f5121-eng \
+	potato_f5121-userdebug
