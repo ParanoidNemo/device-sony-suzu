@@ -31,4 +31,5 @@ PRODUCT_NAME := aosip_f5121
 PRODUCT_MODEL := Xperia X
 
 #Inherit ROM parts
-#$(call inherit-product, device/sony/common/aosip.mk)
+$(call inherit-product, device/sony/common/aosip.mk)
+
