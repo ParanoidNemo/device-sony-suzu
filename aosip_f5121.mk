@@ -25,13 +25,10 @@ TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 # $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 # $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit Potato Stuff
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
-
 # Override Product Name
 
-PRODUCT_NAME := potato_f5121
+PRODUCT_NAME := aosip_f5121
 PRODUCT_MODEL := Xperia X
 
 #Inherit ROM parts
-$(call inherit-product, device/sony/common/potato.mk)
+#$(call inherit-product, device/sony/common/aosip.mk)
