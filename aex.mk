@@ -12,18 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 1080p
+
 TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, device/sony/suzu/device.mk)
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
 # Inherit common aex stuff
-$(call inherit-product, device/sony/suzu/aex.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
-PRODUCT_NAME := aosp_f5121
-PRODUCT_DEVICE := suzu
-PRODUCT_MODEL := Xperia X
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
+# Common kernel source
+TARGET_KERNEL_SOURCE := kernel/sony/msm-4.9/kernel
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
+# Widevine DRM
+$(call inherit-product-if-exists, vendor/sony/widevine/widevine.mk)
