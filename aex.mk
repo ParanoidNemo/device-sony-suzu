@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Bootanimation
-TARGET_BOOTANIMATION_SIZE := 1080p
+TARGET_BOOT_ANIMATION_RES := 1080
 
 TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 
